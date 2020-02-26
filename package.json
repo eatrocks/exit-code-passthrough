@@ -1,28 +1,27 @@
 {
-	"name": "exit-code-passthrough",
-	"version": "1.0.0",
-	"description": "\"Attempt to control which exit code returns from a multi-command npm script\"",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"do:success": "./i-succeed.sh",
-		"do:failure": "./i-fail.sh",
-		"do": "./i-fail.sh; ./i-pass.sh"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/eatrocks/exit-code-passthrough.git"
-	},
-	"keywords": [
-		"exit",
-		"codes",
-		"npm",
-		"scripts"
-	],
-	"author": "Bruce Campbell <eatrocks@gmail.com>",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/eatrocks/exit-code-passthrough/issues"
-	},
-	"homepage": "https://github.com/eatrocks/exit-code-passthrough#readme"
+  "name": "exit-code-passthrough",
+  "version": "1.0.0",
+  "description": "Attempt to control which exit code returns from a multi-command npm script",
+  "main": "index.js",
+  "scripts": {
+    "verify:success": "node task.js succeed",
+    "prerelease": "node task.js fail",
+    "release": "node release.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eatrocks/exit-code-passthrough.git"
+  },
+  "keywords": [
+    "exit",
+    "codes",
+    "npm",
+    "scripts"
+  ],
+  "author": "Bruce Campbell <eatrocks@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eatrocks/exit-code-passthrough/issues"
+  },
+  "homepage": "https://github.com/eatrocks/exit-code-passthrough#readme"
 }
